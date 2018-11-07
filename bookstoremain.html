@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="stylesheet/bookstorestyle.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <div class="bookstoreweb">
+
+            <div class="tophead">
+
+                <div class="logotitle">
+                    <img src="bookstore-logo.jpg" alt="bookstore logo" class="logo">
+                </div>
+
+                <div class="searchbook">
+                    <input type="text" class="searcher" id="booksearch" placeholder="search by any word" @keyup="callinput" autofocus />
+                </div>
+
+            </div>
+
+            <div class="allbodybooks">
+                <div id="f1_container" v-for="book in books" class="booksquare">
+                    <div id="f1_card" class="shadow">
+                        
+                        <div class="front face">
+                            <img v-bind:src="book.cover">
+                        </div>
+                        
+                        <div class="back face enter">
+                            <h3 class="title">{{book.title}}</h3>
+                            <p class="language">Language:{{book.language}}</p>
+                            <p class="description">{{book.description}}</p>
+                            <p class="detail"><a :href="book.detail" target="_blank">{{book.detail}}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="bookstore.js"></script>
+
+</body>
+
+</html>

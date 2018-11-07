@@ -1,0 +1,93 @@
+.bookstoreweb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-image: url("1_SCbNGjbdW2GF_YASXb_vwA.jpeg");
+}
+
+.tophead {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.searchbook {
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 390px;
+}
+
+.searcher {
+    width: 300px;
+    height: 25px;
+}
+
+
+.logotitle {
+    width: 50%;
+    margin-left: 100px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 80px;
+}
+
+img {
+    width: 300px;
+    height: 320px;
+}
+
+.allbodybooks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#f1_container {
+    margin-bottom: 50px;
+    margin-right: 60px;
+    margin-left: 80px;
+    width: 300px;
+    height: 320px;
+    z-index: 1;
+}
+
+#f1_card {
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+}
+
+#f1_container:hover #f1_card {
+    width: 300px;
+    height: 320px;
+    transform: rotateY(180deg);
+    box-shadow: -5px 5px 5px skyblue;
+    text-align: center;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+}
+
+.face.back {
+    display: block;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    padding: 10px;
+    color: black;
+    font-family: helvetica;
+    font-size: 14px;
+    text-align: center;
+    background-color: aliceblue;
+}
